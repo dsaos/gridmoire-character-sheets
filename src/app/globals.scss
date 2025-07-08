@@ -1,7 +1,8 @@
 @import '@/styles/reset.scss';
 
 body {
-  background: white;
+  background: #eee3db;
+  color: #231919;
   font-family: 'Geist', sans-serif;
 }
 
@@ -13,4 +14,25 @@ article {
   max-width: var(--container-width);
   margin: 1em auto;
   text-align: center;
+}
+
+h1 {
+  font-family: UnifrakturCook, serif;
+  font-size: 5em;
+  letter-spacing: -0.1rem;
+  text-decoration: 2px solid underline #a21313;
+  text-underline-offset: -5px;
+}
+
+h2 {
+  font-family: UnifrakturCook, serif;
+  font-size: 3em;
+  letter-spacing: -0.05rem;
+}
+
+hr {
+  border: none;
+  border-top: 3px dotted #dccab9;
+  width: 25%;
+  margin: 4em auto;
 }
