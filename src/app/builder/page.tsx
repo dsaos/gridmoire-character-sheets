@@ -1,5 +1,6 @@
 import Header from "@/components/builder-ui/Header";
 import Canvas from "@/components/builder-ui/Canvas";
+import { SheetConfig } from "@/types/sheet";
 
 import styles from './page.module.scss';
 
@@ -24,11 +25,20 @@ export default function Builder() {
   }
     */
 
+
+  const defaultConfig: SheetConfig = {
+    pageSize: 'letter',
+    pageMargin: 0.5,
+    gridRows: 20,
+    gridColumns: 12,
+    cellGap: 8
+  };
+
   return (
     <div className={styles.body}>
       <Header />
       <main className={styles.container}>
-        <Canvas />
+        <Canvas config={defaultConfig} showGuides={true} />
       </main>
     </div>
   )
