@@ -16,7 +16,8 @@
     "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-rnd": "^10.5.2"
+    "react-moveable": "^0.56.0",
+    "react-selecto": "^1.26.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

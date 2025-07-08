@@ -28,10 +28,10 @@ export default function Builder() {
 
   const defaultConfig: SheetConfig = {
     pageSize: 'letter',
-    pageMargin: 0.5,
+    pageMargin: 1,
     gridRows: 20,
     gridColumns: 12,
-    cellGap: 8
+    cellGap: 0
   };
 
   return (
