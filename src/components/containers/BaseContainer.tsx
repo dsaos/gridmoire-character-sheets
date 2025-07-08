@@ -1,6 +1,6 @@
 'use client';
 
-const BaseContainer = ({ heading, content, style }) => {
+const BaseContainer = ({ heading, content, style }: { heading?: string; content?: string; style?: React.CSSProperties }) => {
   return (
     <div style={{ ...styles.baseContainer, ...style }}>
       {heading && <h1>{heading}</h1>}
