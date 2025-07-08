@@ -1,0 +1,16 @@
+@import '@/styles/reset.scss';
+
+body {
+  background: white;
+  font-family: 'Geist', sans-serif;
+}
+
+:root {
+  --container-width: 1140px;
+}
+
+article {
+  max-width: var(--container-width);
+  margin: 1em auto;
+  text-align: center;
+}
