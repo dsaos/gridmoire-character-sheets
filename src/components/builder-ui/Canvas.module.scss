@@ -1,6 +1,8 @@
 .canvas {
   background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 3px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 0 3px rgba(0, 0, 0, 0.25);
 
   margin: 0 auto; // center in container
   position: relative; // for absolute positioning of guides

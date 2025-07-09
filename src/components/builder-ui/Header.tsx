@@ -1,4 +1,4 @@
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return (
@@ -6,7 +6,7 @@ const Header = () => {
       <h2>Gridmoire</h2>
       <h1>Default Sheet</h1>
     </header>
-  )
+  );
 };
 
 export default Header;

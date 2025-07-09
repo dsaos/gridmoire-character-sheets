@@ -20,7 +20,8 @@ const unifrakturCook = UnifrakturCook({
 
 export const metadata: Metadata = {
   title: "Gridmoire - TTRPG Character Sheets",
-  description: "Craft your own custom, intuitive, and beautiful character sheets for tabletop RPGs like Dungeons & Dragons.",
+  description:
+    "Craft your own custom, intuitive, and beautiful character sheets for tabletop RPGs like Dungeons & Dragons.",
 };
 
 export default function RootLayout({
