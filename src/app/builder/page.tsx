@@ -1,15 +1,12 @@
-import Header from "@/components/builder-ui/Header";
+"use client";
+
 import Canvas from "@/components/builder-ui/Canvas";
-import { Metadata } from "next";
+import Header from "@/components/builder-ui/Header";
+import { BuilderProvider } from "@/context/BuilderContext";
 import { SheetConfig } from "@/types/sheet";
 
 import styles from "./page.module.scss";
 
-export const metadata: Metadata = {
-  title: "Gridmoire Builder",
-  description:
-    "Make your own intuitive and beautiful character sheets for tabletop RPGs like Dungeons & Dragons.",
-};
 
 export default function Builder() {
   /*
@@ -40,11 +37,13 @@ export default function Builder() {
   };
 
   return (
-    <div className={styles.body}>
-      <Header />
-      <main className={styles.container}>
-        <Canvas config={defaultConfig} showGuides={true} />
-      </main>
-    </div>
+    <BuilderProvider>
+      <div className={styles.body}>
+        <Header />
+        <main className={styles.container}>
+          <Canvas config={defaultConfig} />
+        </main>
+      </div>
+    </BuilderProvider>
   );
 }

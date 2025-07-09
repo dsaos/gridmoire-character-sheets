@@ -1,3 +1,6 @@
+import {
+  MantineProvider
+} from "@mantine/core";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, UnifrakturCook } from "next/font/google";
 import "./globals.scss";
@@ -34,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${unifrakturCook.variable} antialiased`}
       >
-        {children}
+        <MantineProvider>
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );

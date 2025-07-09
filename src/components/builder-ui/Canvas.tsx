@@ -1,5 +1,6 @@
 "use client";
 
+import { useBuilderContext } from "@/context/BuilderContext";
 import { SheetConfig } from "@/types/sheet";
 import React from "react";
 import Moveable from "react-moveable";
@@ -8,10 +9,12 @@ import Selecto from "react-selecto";
 import BaseContainer from "@/components/builder-components/BaseContainer";
 import styles from "./Canvas.module.scss";
 
-const Canvas = ({ config, showGuides }: { config: SheetConfig; showGuides: boolean }) => {
+const Canvas = ({ config }: { config: SheetConfig }) => {
   const [targets, setTargets] = React.useState<Array<SVGElement | HTMLElement>>([]);
   const moveableRef = React.useRef<Moveable>(null);
   const selectoRef = React.useRef<Selecto>(null);
+
+  const { showGuides } = useBuilderContext();
 
   // Calculate canvas size in px
   const inchToPx = 96; // 1in = 96px in browsers
@@ -38,7 +41,6 @@ const Canvas = ({ config, showGuides }: { config: SheetConfig; showGuides: boole
     Math.round(i * (rowHeight + (i === 0 ? 0 : cellGap))),
   );
 
-  console.log(horizontalGuidelines, verticalGuidelines);
   return (
     <div
       className={styles.canvas}
